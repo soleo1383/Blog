@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Post</title>
+</head>
+<body>
+
+     {% extends "index.html" %}
+
+     {% block content %}
+         <h1>Delete Post</h1>
+         <hr>
+         <form action="" method="POST">
+         {% csrf_token %}
+         <p>Are You Sure To This Delete Post?</p>
+         <input type="submit" value="confirm">
+         </form>
+     {% endblock content %}
+
+</body>
+</html>

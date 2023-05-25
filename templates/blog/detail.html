@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>detail</title>
+</head>
+<body>
+
+       {% extends 'index.html' %}
+
+       {% block content %}
+          <h1>Detail of {{ object.title }}</h1>
+           <hr>
+           <p>{{ object.body }}</p>
+           <a href="{% url "blog_update" object.id %}">update</a>
+           <a href="{% url "blog_delete" object.id %}">delete</a>
+       {% endblock content %}
+
+</body>
+</html>

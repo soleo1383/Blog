@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>base</title>
+</head>
+<body>
+
+     <div>
+          <ul>
+              <li><a href="{% url 'home' %}">Home</a></li>
+              <li><a href="{% url 'blog_list' %}">Blog</a></li>
+              <li><a href="{% url 'about' %}">about</a></li>
+
+              {% if user.is_authenticated %}
+              <li>Hi {{ user.username }}</li>
+              <li><a href="{% url 'logout' %}">LOGOUT</a></li>
+              {% endif %}
+
+          </ul>
+      </div>
+
+{% block content %}
+
+
+{% endblock content %}
+
+      <div>
+          <h1>footer</h1>
+      </div>
+
+</body>
+</html>

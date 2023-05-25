@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+</head>
+<body>
+
+       {% extends "index.html" %}
+       {% block content %}
+           <h1>REGISTER NOW</h1>
+           <hr>
+           <form action="" method="post">
+           {% csrf_token %}
+               {{ form.as_p }}
+           <input type="submit" name="" id="" value="register">
+           </form>
+       {% endblock content %}
+
+</body>
+</html>

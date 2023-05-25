@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>new_post</title>
+</head>
+<body>
+
+        {% extends "index.html" %}
+
+
+        {% block content %}
+            <h1>create_new_post</h1>
+            <hr>
+            <form action="" method="Post">
+                  {% csrf_token %}
+                  {{ form.as_p }}
+                  <input  type="submit" value="Save">
+
+            </form>
+
+        {% endblock content %}
+
+</body>
+</html>
